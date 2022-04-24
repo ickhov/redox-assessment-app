@@ -3,9 +3,8 @@
 import dotenv from 'dotenv';
 // import the framework itself
 import Fastify from 'fastify';
-import fp from 'fastify-plugin';
 // register your application as a normal plugin.
-import App from '../app.js';
+import App from './app.test.js';
 
 // read the .env file.
 dotenv.config();
@@ -19,7 +18,7 @@ export const getHeadersWithAuthToken = () => ({
 
 export const mochaGlobalSetup = async () => {
   app = Fastify();
-  app.register(fp(App));
+  app.register(App);
   console.log("Loading server's plugins...");
   await app.ready();
   console.log(`Server is running...`);
