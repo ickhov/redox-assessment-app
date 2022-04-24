@@ -14,7 +14,7 @@ Create a personal access token on GitHub with the following permissions:
 - read:user
 - read:gpg_key
 
-Create an .env file and copy and paste the following data to the file
+Create an .env file at the root directory and copy and paste the following data to the file
 ```
 NODE_ENV=development
 PORT=8000
