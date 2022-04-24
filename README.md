@@ -89,9 +89,11 @@ You can access the API through http://0.0.0.0:8000 and the available endpoints a
 
 Run all the test scripts
 ```
-npm test test/api
+npm test test/routes/*
 ```
 Run a specific test script
 ```
-npm test test/api/ping.test.js
+npm test test/routes/root
 ```
+
+**Note**: Due to the nature of the app, I removed the timeout check for the test since it will automatically fail if the API takes too long to respond. I only need to test the API to test the plugins since the API uses the plugins.
