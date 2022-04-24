@@ -37,13 +37,17 @@ npm start
 
 ## Access the data through console
 
-After running the project, it'll take awhile to start since it's retrieving the Ramda's repository data. After, we can start looking through the data using the console by typing in functions such as
+After running the project, it'll take awhile to start since it's retrieving the Ramda's repository data. After, you can start looking through the data using the console by typing in functions such as
 ```
-> data.length
+> data
 ```
 OR
 ```
 > data[1].pullRequests.data.filter(e => new Date(e.mergedAt) > new Date('2014-11-30T22:24:11Z'))
+```
+OR
+```
+> exit() // close the app
 ```
 The console has knowledge of the data through the **data** variable. You can type in any valid functions and it'll return the response. The drawback, however, is that you can only call single line function.
 
